@@ -13,9 +13,9 @@
 
 //CODE HERE
 
-function helloWorld(){
-  console.log('Hello, World')
-}
+const helloWorld = () => console.log('Hello World!')
+
+helloWorld()
 
 ////////////////// PROBLEM 2 ////////////////////
 
@@ -25,9 +25,9 @@ function helloWorld(){
 
 //CODE HERE
 
-const jsNinja = () => 'I am a JavaScript ninja!'
+const jsNinja = () => console.log('I am a JavaScript ninja!')
 
-console.log(jsNinja())
+jsNinja()
 
 ////////////////// PROBLEM 3 ////////////////////
 /*
@@ -38,10 +38,9 @@ console.log(jsNinja())
 
 //CODE HERE
 
-function printName(name1){
-  console.log(name1)
-}
-printName('Billy Bob')
+const printName = (nombre) => console.log(nombre)
+
+printName('Billy')
 
 ////////////////// PROBLEM 4 ////////////////////
 /*
@@ -55,10 +54,9 @@ printName('Billy Bob')
 
 //CODE HERE
 
-function greeting(name){
-  console.log('Hello ' + name)
-}
-greeting('Tyrone')
+const greeting = (name) => console.log(`Hello ${name}`)
+
+greeting('Jorge')
 
 ////////////////// PROBLEM 5 ////////////////////
 
@@ -73,14 +71,15 @@ greeting('Tyrone')
 
 //CODE HERE
 
-const compareNums = (num1, num2) => {
-  if(num1 > num2){
-    return num1
-  } else{
-    return num2
-  }
+const compareNums = (x, y) => {
+    if(x >= y){
+        return x
+    } else{
+        return y
+    }
 }
-console.log(compareNums(2, 4))
+
+console.log(compareNums(3, 2))
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
@@ -92,13 +91,7 @@ console.log(compareNums(2, 4))
 
 //CODE HERE
 
-function add(thingUno, thingDos){
-  let numThingUno = Number(thingUno)
-  let numThingDos = Number(thingDos)
-  console.log(numThingUno + numThingDos)
-}
-add(44, 6)
-add("144", 45)
+
 
 ////////////////// PROBLEM 7 ////////////////////
 
@@ -113,7 +106,7 @@ const exclaim = function(str) {
 
 // console.log('arrow')
 // console.log('declaration')
- console.log('expression')
+//console.log('expression')
 
 
 
@@ -128,7 +121,7 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-console.log('arrow')
+// console.log('arrow')
 // console.log('declaration')
 // console.log('expression')
 
@@ -153,7 +146,7 @@ function exclaimFour(str) {
 }
 
 // console.log('arrow')
-console.log('declaration')
+// console.log('declaration')
 // console.log('expression')
 
 
@@ -168,16 +161,6 @@ console.log('declaration')
 
 //CODE HERE
 
-function nameCheck(name){
-  if(name === 'Steven'){
-     console.log('What is up Steven')
-  } else if(name === 'Bryan'){
-    console.log('Hey Bryan!')
-  } else{
-    console.log(`Cool name ${name}`)
-  }
-}
-nameCheck('Johnny')
 
 // let nameGreeting = namecheck()
 
@@ -194,21 +177,7 @@ nameCheck('Johnny')
 
 //CODE HERE
 
-function faveColorFinder(color){
-  if(color === 'red'){
-    return 'red is the great color'
-  }else if(color === 'green'){
-    return 'green is a solid favorite color'
-  }else if(color === 'black'){
-    return 'so trendy'
-  } else{
-    return 'you need to evaluate your favorite color choice'
-  }
-}
 
-let colorRating = faveColorFinder()
-
-console.log(faveColorFinder('yellow'))
 
 ////////////////// PROBLEM 12 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
@@ -220,12 +189,7 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 
 //CODE HERE
 
-function printAllNames(arr){
-  for(let i = 0; i < arr.length; i++)
-    console.log(arr[i])
-}
 
-printAllNames(namesArr)
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
@@ -237,16 +201,7 @@ printAllNames(namesArr)
 
 //CODE HERE
 
-function thatsOdd(number){
-  if(number % 2 === 0){
-    return "That's not odd!"
-  } else{
-    return "That is odd indeed"
-  }
-}
-let oddChecker = thatsOdd()
 
-console.log(thatsOdd(6))
 
 
 ////////////////// PROBLEM 14 ////////////////////
@@ -261,9 +216,6 @@ console.log(thatsOdd(6))
 
 //CODE HERE
 
-const bestMovie = (movie) => `${movie} is the best movie ever!`
-
-console.log(bestMovie('The Jimmy Neutron Movie'))
 
 
 ////////////////// PROBLEM 15 ////////////////////
@@ -279,18 +231,7 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 
 //CODE HERE
 
-function bigOrSmall(arr){
-  let answers = []
-  for(i = 0; i < arr.length; i++){
-    if(arr[i] > 100){
-      answers.push('big')
-    }else{
-      answers.push('small')
-    }
-  }
-  return answers
-}
-console.log(bigOrSmall(bigOrSmallArray))
+
 
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
@@ -302,16 +243,7 @@ let loser = 'Glimmer'
 
 //CODE HERE
 
-function theEliminator(contestants, loser){
-  for(i = 0; i < contestants.length; i++){
-    if(contestants[i] === loser){
-    contestants.splice(i, 1, 1)
-    }
-  }
-  return contestants
-}
 
-console.log(contestants)
 
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo."
